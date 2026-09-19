@@ -1,0 +1,16 @@
+center_id,locality,age_band,eligible_population
+MLD-01,Malard,12-17,8233
+MLD-01,Malard,18-59,60375
+MLD-01,Malard,60+,12807
+MLD-02,Sabashahr,12-17,7159
+MLD-02,Sabashahr,18-59,52500
+MLD-02,Sabashahr,60+,11136
+MLD-03,Vahedieh,12-17,6085
+MLD-03,Vahedieh,18-59,44625
+MLD-03,Vahedieh,60+,9466
+MLD-04,Sadeghieh,12-17,5727
+MLD-04,Sadeghieh,18-59,42000
+MLD-04,Sadeghieh,60+,8909
+MLD-05,Chelab,12-17,4295
+MLD-05,Chelab,18-59,31500
+MLD-05,Chelab,60+,6682

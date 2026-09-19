@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#33465F"/>
+    </marker>
+  </defs>
+  <style>
+    .box{fill:#F5F8FA;stroke:#E2E8F0;stroke-width:1.5;}
+    .box-ink{fill:#0B2545;stroke:#0B2545;}
+    .box-accent{fill:#0E7C86;stroke:#0E7C86;}
+    .lbl{font-size:13px;fill:#0B2545;font-weight:700;}
+    .lbl-light{font-size:13px;fill:#FFFFFF;font-weight:700;}
+    .sub{font-size:10.5px;fill:#72839C;}
+    .edge{stroke:#33465F;stroke-width:1.5;fill:none;marker-end:url(#arrow);}
+  </style>
+
+  <rect x="20" y="20" width="960" height="140" rx="10" class="box"/>
+  <text x="35" y="40" class="lbl" style="font-size:12px">SYNTHETIC DATA GENERATION (seeded, reproducible)</text>
+
+  <rect x="35" y="55" width="150" height="80" rx="8" class="box-ink"/>
+  <text x="110" y="80" text-anchor="middle" class="lbl-light" style="font-size:11.5px">Calendar &amp;</text>
+  <text x="110" y="96" text-anchor="middle" class="lbl-light" style="font-size:11.5px">Centers</text>
+  <text x="110" y="114" text-anchor="middle" class="sub" fill="#B9CBE2">calendar_utils.py</text>
+  <text x="110" y="126" text-anchor="middle" class="sub" fill="#B9CBE2">centers.py</text>
+
+  <rect x="200" y="55" width="150" height="80" rx="8" class="box-accent"/>
+  <text x="275" y="80" text-anchor="middle" class="lbl-light" style="font-size:11.5px">Vaccination +</text>
+  <text x="275" y="96" text-anchor="middle" class="lbl-light" style="font-size:11.5px">Dose Sequence</text>
+  <text x="275" y="114" text-anchor="middle" class="sub" fill="#DCF2EF">vaccination_curve.py</text>
+
+  <rect x="365" y="55" width="140" height="80" rx="8" class="box-ink"/>
+  <text x="435" y="90" text-anchor="middle" class="lbl-light" style="font-size:11.5px">Epidemic Curve</text>
+  <text x="435" y="108" text-anchor="middle" class="sub" fill="#B9CBE2">epidemic_curve.py</text>
+
+  <rect x="520" y="55" width="140" height="80" rx="8" class="box"/>
+  <text x="590" y="85" text-anchor="middle" class="lbl" style="font-size:11.5px">Eligible</text>
+  <text x="590" y="101" text-anchor="middle" class="lbl" style="font-size:11.5px">Population</text>
+  <text x="590" y="118" text-anchor="middle" class="sub">population.py</text>
+
+  <rect x="675" y="55" width="140" height="80" rx="8" class="box"/>
+  <text x="745" y="90" text-anchor="middle" class="lbl" style="font-size:11.5px">AEFI · Wastage</text>
+  <text x="745" y="106" text-anchor="middle" class="sub">aefi.py · wastage.py</text>
+
+  <rect x="830" y="55" width="140" height="80" rx="8" class="box"/>
+  <text x="900" y="85" text-anchor="middle" class="lbl" style="font-size:11.5px">Staffing ·</text>
+  <text x="900" y="101" text-anchor="middle" class="lbl" style="font-size:11.5px">Appointments</text>
+  <text x="900" y="118" text-anchor="middle" class="sub">staffing.py · appointments.py</text>
+
+  <rect x="20" y="200" width="960" height="70" rx="10" class="box"/>
+  <text x="35" y="220" class="lbl" style="font-size:12px">DATA/RAW — 9 CSV TABLES</text>
+  <text x="35" y="245" class="sub" style="font-size:11px">vaccination_centers · daily_vaccinations (+dose_number) · supply_center_log · daily_covid_cases · population_by_locality_age · aefi_reports · vaccine_wastage_log · center_staffing_log · appointments_log</text>
+
+  <rect x="20" y="310" width="460" height="80" rx="10" class="box-accent"/>
+  <text x="250" y="340" text-anchor="middle" class="lbl-light" style="font-size:12px">OPERATIONAL KPI ANALYTICS</text>
+  <text x="250" y="360" text-anchor="middle" class="sub" fill="#DCF2EF">coverage · wastage · staffing utilization</text>
+  <text x="250" y="374" text-anchor="middle" class="sub" fill="#DCF2EF">AEFI rate · appointment no-show rate</text>
+
+  <rect x="520" y="310" width="460" height="80" rx="10" class="box-ink"/>
+  <text x="750" y="340" text-anchor="middle" class="lbl-light" style="font-size:12px">FEATURE ENGINEERING + FORECASTING</text>
+  <text x="750" y="360" text-anchor="middle" class="sub" fill="#B9CBE2">build_features.py -&gt; SARIMA (auto_arima)</text>
+  <text x="750" y="374" text-anchor="middle" class="sub" fill="#B9CBE2">vs. XGBoost (multi-step + one-step)</text>
+
+  <rect x="20" y="450" width="460" height="80" rx="10" class="box"/>
+  <text x="250" y="480" text-anchor="middle" class="lbl" style="font-size:12px">reports/</text>
+  <text x="250" y="500" text-anchor="middle" class="sub">model_comparison_report.md</text>
+  <text x="250" y="514" text-anchor="middle" class="sub">figures/*.png · future_forecast_30d.csv</text>
+
+  <rect x="520" y="450" width="460" height="80" rx="10" class="box-accent"/>
+  <text x="750" y="480" text-anchor="middle" class="lbl-light" style="font-size:12px">INTERACTIVE HTML DASHBOARD</text>
+  <text x="750" y="500" text-anchor="middle" class="sub" fill="#DCF2EF">9 sections · self-contained · docs/index.html</text>
+  <text x="750" y="514" text-anchor="middle" class="sub" fill="#DCF2EF">(GitHub Pages)</text>
+
+  <!-- edges -->
+  <path d="M500,160 C500,175 500,185 500,200" class="edge"/>
+  <path d="M300,270 C300,285 260,295 250,310" class="edge"/>
+  <path d="M700,270 C700,285 740,295 750,310" class="edge"/>
+  <path d="M250,390 C250,410 250,430 250,450" class="edge"/>
+  <path d="M750,390 C750,410 750,430 750,450" class="edge"/>
+  <path d="M250,490 C400,510 600,510 700,490" class="edge" style="marker-end:none"/>
+  <path d="M480,530 C500,545 500,545 520,530" class="edge"/>
+</svg>

@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+*.duckdb
+
+# Generated artifacts (reproducible via scripts/*.py - kept out of git
+# so the repo stays lightweight; CI regenerates and tests them).
+data/processed/*
+!data/processed/.gitkeep
+
+# Dashboard build output (regenerable via scripts/build_dashboard.py;
+# docs/index.html is the committed copy GitHub Pages actually serves).
+dashboard/dist/*
+!dashboard/dist/.gitkeep
+
+.DS_Store
+.idea/
+.vscode/
+*.draft.md

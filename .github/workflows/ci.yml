@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run unit tests
+        run: pytest tests/ -v
+
+      - name: Regenerate synthetic dataset (smoke test)
+        run: python scripts/generate_sample_data.py
+
+      - name: Run forecasting pipeline end-to-end (smoke test)
+        run: python scripts/run_forecast_pipeline.py
+
+      - name: Build dashboard (smoke test)
+        run: python scripts/build_dashboard.py
+
+      - name: Upload generated report as a build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: forecast-report-py${{ matrix.python-version }}
+          path: |
+            reports/model_comparison_report.md
+            reports/figures/*.png
+
+      - name: Upload dashboard as a build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dashboard-py${{ matrix.python-version }}
+          path: dashboard/dist/index.html

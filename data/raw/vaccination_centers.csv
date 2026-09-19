@@ -1,0 +1,7 @@
+center_id,center_name,center_type,locality,relative_capacity
+MLD-01,Malard Central Health Center,vaccination_center,Malard,1.15
+MLD-02,Sabashahr Health Center,vaccination_center,Sabashahr,1.0
+MLD-03,Vahedieh Health Center,vaccination_center,Vahedieh,0.85
+MLD-04,Sadeghieh-e Malard Vaccination Center,vaccination_center,Sadeghieh,0.8
+MLD-05,Chelab Rural Vaccination Center,vaccination_center,Chelab,0.6
+MLD-SUP,Malard District Vaccine Supply & Cold Chain Center,supply_center,Malard,

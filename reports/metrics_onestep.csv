@@ -1,0 +1,3 @@
+model,MAE,RMSE,MAPE_%,sMAPE_%,R2
+SARIMA (one-step-ahead),60.76,111.56,18.77,17.33,0.8065
+XGBoost (one-step-ahead),118.65,148.05,29.6,18.96,0.6592
