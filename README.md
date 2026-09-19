@@ -204,6 +204,8 @@ A single self-contained HTML file (`dashboard/dist/index.html`) with a clean, cl
 
 ![Dashboard preview](dashboard/assets/dashboard-preview.png)
 
+**Full preview of all 9 sections:** [`docs/dashboard_preview.md`](docs/dashboard_preview.md)
+
 Open it directly in any browser, or build it fresh with `python scripts/build_dashboard.py`.
 
 ---

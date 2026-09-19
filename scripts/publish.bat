@@ -65,8 +65,10 @@ if not exist ".git" (
     echo ==^> Remote has no %BRANCH% branch yet - starting fresh history.
     git checkout -b %BRANCH%
   ) else (
-    echo ==^> Basing local repo on the existing origin/%BRANCH% history...
-    git checkout -b %BRANCH% origin/%BRANCH%
+    echo ==^> Adopting the existing origin/%BRANCH% history as this branch's base
+    echo     ^(without touching your local files^)...
+    git checkout -b %BRANCH%
+    git reset origin/%BRANCH%
   )
 ) else (
   echo ==^> Existing git repository detected.
