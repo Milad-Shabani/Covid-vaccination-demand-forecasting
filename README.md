@@ -106,8 +106,7 @@ covid-vaccination-demand-forecasting/
 │   ├── generate_sample_data.py     # produces data/raw/*.csv + data/processed/ KPIs
 │   ├── run_forecast_pipeline.py    # trains/evaluates models, writes reports/
 │   ├── build_dashboard.py          # builds dashboard/dist/index.html
-│   ├── publish_to_github.sh        # commit + push (Linux/macOS)
-│   └── publish.bat                 # commit + push via GitHub CLI (Windows)
+│   └── publish_to_github.sh        # commit + push (Linux/macOS)
 ├── data/raw/                 # generated synthetic source data (checked in for convenience)
 ├── data/processed/           # derived features + operational KPI tables
 ├── reports/                  # generated metrics, figures, and the comparison report
@@ -138,7 +137,7 @@ pytest tests/ -v
 
 Or with `make`: `make install data forecast dashboard test`.
 
-**Publishing to GitHub:** on Windows, double-click `scripts\publish.bat` **from inside the `scripts\` folder — do not copy or move it elsewhere** (it refuses to run if it can't verify it's in the right place, but don't rely on that: always run it in place). Requires [Git](https://git-scm.com/) on PATH and an authenticated GitHub credential. On Linux/macOS, run `./scripts/publish_to_github.sh https://github.com/Milad-Shabani/Covid-vaccination-demand-forecasting.git`. Both scripts commit everything and push to `main`, automatically pulling/rebasing first if the remote has commits you don't have locally.
+**Publishing to GitHub:** on Linux/macOS, run `./scripts/publish_to_github.sh https://github.com/Milad-Shabani/Covid-vaccination-demand-forecasting.git`. Requires [Git](https://git-scm.com/) on PATH and an authenticated GitHub credential. The script commits everything and pushes to `main`, automatically pulling/rebasing first if the remote has commits you don't have locally.
 
 Outputs land in `reports/model_comparison_report.md`, `reports/figures/*.png`, and `data/processed/future_forecast_30d.csv`.
 
